@@ -1,0 +1,2 @@
+mcs -pkg:gtk-sharp-2.0 Program.cs -out:WidgetShowcase.exe
+mono GTKWidgetDemo.exe
