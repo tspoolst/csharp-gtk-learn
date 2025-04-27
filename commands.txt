@@ -1,2 +1,53 @@
-mcs -pkg:gtk-sharp-2.0 Program.cs -out:WidgetShowcase.exe
-mono GTKWidgetDemo.exe
+do not use mcs it is depricated
+do net use gtk2 it is also depricated
+use gtk3, use dotnet publish
+
+dotnet new console -n csharp-gtk-learn
+cd csharp-gtk-learn
+dotnet restore
+
+dotnet run
+  or
+dotnet publish -r linux-x64 --self-contained -c Release
+./bin/Release/net7.0/linux-x64/publish/csharp-gtk-learn
+
+
+
+
+2. Choose a GUI Library
+There are several GUI libraries available for C# on Linux. Popular options include:
+
+a. GTK# (GtkSharp)
+A .NET binding for the GTK toolkit.
+Cross-platform and well-suited for Linux environments.
+Install the GTK development package:
+bash
+sudo apt install -y libgtk-3-dev
+b. Avalonia
+Cross-platform GUI framework for .NET.
+Simple to use and modern.
+Install Avalonia templates:
+dotnet new install Avalonia.Templates
+c. MAUI (Experimental for Linux)
+.NET Multi-platform App UI (MAUI) is Microsoft's cross-platform framework.
+Limited support for Linux (experimental).
+
+
+For Avalonia:
+bash
+dotnet new avalonia.app -n AvaloniaApp
+cd AvaloniaApp
+
+
+6. Optional: Install an IDE
+For easier development, you can use an IDE like:
+
+Visual Studio Code with C# extension
+JetBrains Rider (commercial)
+MonoDevelop
+
+Install Visual Studio Code:
+sudo snap install --classic code
+
+
+

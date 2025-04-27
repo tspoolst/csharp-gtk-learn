@@ -1,14 +1,14 @@
 using Gtk;
 using System;
 
-class Program
+class GTKWidgetDemo
 {
     static void Main(string[] args)
     {
         Application.Init();
 
         // Create a new window
-        Window window = new Window("GTK# Widget Showcase");
+        Window window = new Window("GTK# Widget Showcase (GTK 3)");
         window.SetDefaultSize(600, 400);
         window.DeleteEvent += (o, e) => Application.Quit();
 
@@ -39,8 +39,8 @@ class Program
         };
         vbox.PackStart(entry, false, false, 0);
 
-        // Add a combo box (replacing ComboBoxText)
-        ComboBox comboBox = ComboBox.NewText();
+        // Add a combo box (using ComboBoxText for GTK 3)
+        ComboBoxText comboBox = new ComboBoxText();
         comboBox.AppendText("Option 1");
         comboBox.AppendText("Option 2");
         comboBox.AppendText("Option 3");
